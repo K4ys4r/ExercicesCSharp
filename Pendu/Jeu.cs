@@ -202,7 +202,7 @@ ____
         {
             // Vérifie que le mot n'est pas vide ou constitué d'espaces
             // Vérifie que le mot a une longueur comprise entre 3 et 25 caractères
-
+             
             if (mot.Length >= 3 && mot.Length <= 25)
             {
                 // Vérifie que le mot ne contient que des lettres non accentuées

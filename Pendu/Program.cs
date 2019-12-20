@@ -10,21 +10,23 @@ namespace Pendu
 
             //--------------------------------------------------------------------------
             // 1. Les étapes ci-desous consistent à faire saisir un mot valide au 1er joueur
-
+            
             string mot = string.Empty;
             bool motValide = false;
             char lettreJoeur;
 
 
+            
             // Tant que le mot saisi n'est pas valide
             while (!motValide)
             {
+
+                Console.WriteLine("Saisissez un mot de 3 à 25 lettres sans accent : ");
+                mot = Console.ReadLine().ToLower();
+
                 try
                 {
                     // On fait saisir le mot
-                    Console.WriteLine("Saisissez un mot de 3 à 25 lettres sans accent : ");
-                    mot = Console.ReadLine().ToLower();
-
                     // On vérifie son format (appeler la méthode statique VerifierMot)
                     Jeu.VerifierMot(mot);
                     motValide = true;
@@ -71,7 +73,7 @@ namespace Pendu
                     Console.ResetColor();
                 }
             }
-
+            
             Console.ReadKey();
         }
     }
