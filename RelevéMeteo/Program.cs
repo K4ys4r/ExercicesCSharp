@@ -9,17 +9,27 @@ namespace RelevéMeteo
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            string ligneHorizontal = new string('-', 5 * 14 + 8);
-            string[] donnéesMeteo = File.ReadAllLines(@"..\..\..\DonnéesMétéoParis.txt");
-            Console.WriteLine(string.Format("{0,14} |{1,14} |{2,14} |{3,14} |{4,14}","Mois","T° min","T° max","Précip (mm)","Ensol (H)"));
+            //string ligneHorizontal = new string('-', 5 * 14 + 8);
+            //string[] donnéesMeteo = File.ReadAllLines(@"..\..\..\DonnéesMétéoParis.txt");
+            //Console.WriteLine(string.Format("{0,14} |{1,14} |{2,14} |{3,14} |{4,14}","Mois","T° min","T° max","Précip (mm)","Ensol (H)"));
 
-            Console.WriteLine(ligneHorizontal);
-            RelevéMensuel donnéeAfficher;
-            for (int i = 1; i < donnéesMeteo.Length; i++)
-            {
-                donnéeAfficher = new RelevéMensuel(donnéesMeteo[i]);
-                Console.WriteLine(donnéeAfficher.ToString());
-            }
+            //Console.WriteLine(ligneHorizontal);
+            //RelevéMensuel donnéeAfficher;
+            //for (int i = 1; i < donnéesMeteo.Length; i++)
+            //{
+            //    donnéeAfficher = new RelevéMensuel(donnéesMeteo[i]);
+            //    Console.WriteLine(donnéeAfficher.ToString());
+            //}
+
+            var données = RelevéMeteo.DAL.GetRelevésMensuels();
+            //foreach (var item in données)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Stats stat = new Stats(données);
+            Console.WriteLine(stat.GetPrécipitationsAnnée(2017));
+            var obj = stat.ReleveTempMax;
+            Console.WriteLine($"{obj.Mois} : {obj.TemperatureMax}");
 
         }
     }
