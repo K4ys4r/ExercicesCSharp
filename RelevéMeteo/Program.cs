@@ -22,10 +22,10 @@ namespace RelevéMeteo
             //}
 
             var données = RelevéMeteo.DAL.GetRelevésMensuels();
-            //foreach (var item in données)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            foreach (var item in données)
+            {
+               Console.WriteLine(item);
+            }
             Stats stat = new Stats(données);
             Console.WriteLine(stat.GetPrécipitationsAnnée(2017));
             var obj = stat.ReleveTempMax;
