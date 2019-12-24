@@ -1,0 +1,17 @@
+Question 1 - Qu’est qu’un assembly ?
+A.	Un type particulier de collection
+B.	Un ensemble de classes dans lequel tous les noms sont uniques
+*C.	Le résultat de la compilation d’un projet (dll ou exe)
+
+Question 2 – pour passer un paramètre en out à une fonction, la variable correspondante doit être :
+A.	Déclarée et initialisée à l’intérieur de la fonction
+*B.	Déclarée à l’extérieur de la fonction et initialisée à l’intérieur de la fonction
+C.	Déclarée à l’intérieur de la fonction et initialisée à l’extérieur de la fonction
+D.	Déclarée et initialisée à l’extérieur de la fonction
+
+Question 3 – Pour lever une exception, quelle est la syntaxe correcte ?
+A.	return ArgumentOutOfRangeException ;
+B.	return new ArgumentOutOfRangeException() ;
+C.	throw ArgumentOutOfRangeException ;
+*D.	throw new ArgumentOutOfRangeException() ;
+
